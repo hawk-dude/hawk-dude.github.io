@@ -17,6 +17,7 @@ export const work: Work[] = [
             "Responsible for the smooth migration to new software and Google services.",
             "Saved 4000+ CAD by creating efficient backup solutions and local network storage.",
         ],
+        image: "/assets/img/GELIOS_DENTAL_Logo.jpg",
     },
     {
         title: "System Administrator",
@@ -29,6 +30,7 @@ export const work: Work[] = [
             "Deployed Wake-on-LAN via a script on a MikroTik router.",
             "Configured OpenVPN, RDP, and port forwarding for remote coworkers.",
         ],
+        image: "/assets/img/ukrfeed-ltd.jpg",
     },
 ];
 
@@ -46,6 +48,7 @@ export const education: Education[] = [
             "Advanced Placement Enhancement Scholarship for AP Calculus BC and Computer Science A (2024)",
             "Activities: soccer league, math club",
         ],
+        image: "/assets/img/UofM.jpg",
     },
     {
         school: "IT Step Academy (Cisco Networking Academy)",
@@ -58,6 +61,7 @@ export const education: Education[] = [
             "Cisco Certified Network Associate (CCNA), November 2023",
             "Hands-on experience with Packet Tracer and advanced labs in GNS3",
         ],
+        image: "/assets/img/it_step_academy.jpg",
     },
     {
         school: "Grant Park High School",
@@ -70,6 +74,7 @@ export const education: Education[] = [
             "Award of Excellence in Computer Science 40S: best student in the course school-wide (2023)",
             "Activities: Pirates soccer team, math club",
         ],
+        image: "/assets/img/gphs.png",
     },
 ];
 
@@ -80,6 +85,7 @@ export const certifications: Certification[] = [
         date: "November 2023",
         description:
             "Validated knowledge of networking concepts and skills required to install, configure, and troubleshoot networks.",
+        image: "/assets/img/ccna.png",
     },
     {
         title: "AWS Cloud Practitioner",
@@ -87,6 +93,7 @@ export const certifications: Certification[] = [
         date: "April 2023",
         description:
             "Validated knowledge of IT services and their uses in the AWS Cloud.",
+        image: "/assets/img/aws-practitioner.png",
     },
 ];
 

@@ -7,7 +7,8 @@ export type Work = {
     location: string;
     start_date: string;
     end_date: string;
-    responsibilities: Array<string>; 
+    responsibilities: Array<string>;
+    image: string;
 };
 
 /**
@@ -20,6 +21,7 @@ export type Education = {
     start_date: string;
     end_date: string;
     achievements: Array<string>;
+    image: string;
 };
 
 /**
@@ -30,6 +32,7 @@ export type Certification = {
     issuer: string;
     date: string;
     description: string;
+    image: string;
 };
 
 /**
@@ -37,7 +40,8 @@ export type Certification = {
  */
 export type Project = {
     title: string;
-    key_words: Array<String>;
+    key_words: Array<string>;
     date: string;
     description: string;
+    image?: string;
 };
