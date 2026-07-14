@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Fonts: everything is monospace (JetBrains Mono loaded in layout.tsx) */
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-sans: var(--font-jetbrains-mono), ui-monospace, monospace;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Kanagawa Wave palette (https://github.com/rebelot/kanagawa.nvim) */
+  --color-sumi-ink-0: #16161d; /* darker bg: titlebar, floats */
+  --color-sumi-ink-1: #1f1f28; /* main background */
+  --color-sumi-ink-2: #2a2a37; /* lighter bg */
+  --color-sumi-ink-3: #363646; /* lighter bg: popups */
+  --color-sumi-ink-4: #54546d; /* borders */
+  --color-wave-blue-1: #223249; /* visual selection bg */
+  --color-wave-blue-2: #2d4f67; /* search highlight bg */
+  --color-fuji-white: #dcd7ba; /* main foreground */
+  --color-old-white: #c8c093; /* dimmer foreground */
+  --color-fuji-gray: #727169; /* comments, muted */
+  --color-crystal-blue: #7e9cd8; /* functions, links */
+  --color-spring-green: #98bb6c; /* strings, success */
+  --color-carp-yellow: #e6c384; /* identifiers */
+  --color-sakura-pink: #d27e99; /* numbers */
+  --color-oni-violet: #957fb8; /* keywords */
+  --color-surimi-orange: #ffa066; /* constants */
+  --color-wave-aqua-2: #7aa89f; /* types */
+  --color-peach-red: #ff5d62; /* errors */
+  --color-ronin-yellow: #ff9e3b; /* warnings */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-sumi-ink-1);
+  color: var(--color-fuji-white);
+}
+
+::selection {
+  background-color: var(--color-wave-blue-2);
 }

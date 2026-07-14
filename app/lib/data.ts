@@ -58,7 +58,6 @@ export const education: Education[] = [
         end_date: "August 2024",
         achievements: [
             "GPA: 4.0",
-            "Cisco Certified Network Associate (CCNA), November 2023",
             "Hands-on experience with Packet Tracer and advanced labs in GNS3",
         ],
         image: "/assets/img/it_step_academy.jpg",
