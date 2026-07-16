@@ -33,7 +33,7 @@ export default function About() {
           </p>
           <p>
             Off the clock: soccer, swimming, grand strategy games (Vic3, HOI4,
-            CK3), CTFs, and endlessly customizing my Arch Linux setup.
+            CK3), CTFs, and endlessly customizing my Arch Linux setup. I have already reinstalled OS 5 times just for fun, and I&apos;m not done yet.
           </p>
         </div>
       </section>

@@ -45,3 +45,5 @@ export type Project = {
     description: string;
     image?: string;
 };
+
+export type Stat = { label: string; value: string };

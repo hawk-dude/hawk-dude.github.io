@@ -1,46 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Prompt from "./ui/prompt";
-import { site } from "./lib/site";
-
-type Stat = { label: string; value: string };
-
-// Sections: bio, technical, things I like
-const statGroups: Stat[][] = [
-  [
-    { label: "Name", value: site.name },
-    { label: "Title", value: "CS Student · System Administrator" },
-    { label: "School", value: "University of Manitoba" },
-    { label: "Origin", value: "Kyiv, Ukraine" },
-    { label: "Countries Visited", value: "7" },
-  ],
-  [
-    { label: "OS", value: "Arch Linux x86_64 (btw)" },
-    { label: "CPU", value: "AMD Ryzen 5 7600X" },
-    { label: "GPU", value: "NVIDIA GeForce RTX 4070 SUPER" },
-    { label: "Memory", value: "32 GiB" },
-    { label: "Languages", value: "Java, TypeScript, Python, Bash" },
-    { label: "PC Builds", value: "3" },
-  ],
-  [
-    { label: "Favourite Game", value: "Victoria 3" },
-    { label: "Favourite Song", value: "Lil Mosey — Go Ahead" },
-    { label: "Favourite Movie", value: "Sherlock Holmes" },
-    { label: "Favourite Course", value: "Data Structures & Algorithms" },
-    { label: "Last Book Read", value: "Jules Verne — 20,000 Leagues Under the Sea" },
-  ],
-];
-
-const paletteRow = [
-  "bg-sumi-ink-4",
-  "bg-peach-red",
-  "bg-spring-green",
-  "bg-carp-yellow",
-  "bg-crystal-blue",
-  "bg-oni-violet",
-  "bg-wave-aqua-2",
-  "bg-fuji-white",
-];
+import { bio, fastfetch, paletteRow } from "./lib/data";
 
 export default function Home() {
   return (
@@ -51,7 +12,7 @@ export default function Home() {
           {/* Logo slot: fastfetch shows an image here */}
           <Image
             src="/assets/img/profile.jpg"
-            alt={site.name}
+            alt={bio.name}
             width={192}
             height={192}
             priority
@@ -59,13 +20,13 @@ export default function Home() {
           />
           <div className="min-w-0 text-sm leading-6">
             <p>
-              <span className="text-spring-green">{site.user}</span>
+              <span className="text-spring-green">{bio.user}</span>
               <span className="text-fuji-white">@</span>
-              <span className="text-spring-green">{site.host}</span>
+              <span className="text-spring-green">{bio.host}</span>
             </p>
             <p className="text-fuji-gray">-----------------</p>
             <dl className="flex flex-col gap-3">
-              {statGroups.map((group) => (
+              {fastfetch.map((group) => (
                 <div key={group[0].label}>
                   {group.map((stat) => (
                     <div key={stat.label} className="flex gap-2">

@@ -1,4 +1,16 @@
-import type { Work, Education, Certification, Project } from "./definitions";
+import type { Work, Education, Certification, Project, Stat } from "./definitions";
+
+export const bio = {
+    name: "Oleksandr Yastrebov",
+    user: "hawk",
+    host: "yastreb",
+    email: "oleksandr.yastrebov.ca@gmail.com",
+    github: "https://github.com/hawk-dude",
+    githubHandle: "hawk-dude",
+    linkedin: "https://www.linkedin.com/in/oleksandr-yastrebov/",
+    linkedinHandle: "oleksandr-yastrebov",
+    location: "Winnipeg, MB, Canada",
+};
 
 export const work: Work[] = [
     {
@@ -58,7 +70,8 @@ export const education: Education[] = [
         end_date: "August 2024",
         achievements: [
             "GPA: 4.0",
-            "Hands-on experience with Packet Tracer and advanced labs in GNS3",
+            "Cisco Academy",
+            "Linux/Windows Server, Docker, Ansible, Azure, Python, GNS 3, Packet Tracer"
         ],
         image: "/assets/img/it_step_academy.jpg",
     },
@@ -118,4 +131,41 @@ export const projects: Project[] = [
         description:
             "Personal portfolio built with Next.js and TailwindCSS, styled as a Kanagawa-themed terminal, hosted on GitHub Pages at hawk-dude.github.io.",
     },
+];
+
+// Sections: bio, technical, things I like
+export const fastfetch: Stat[][] = [
+  [
+    { label: "Name", value: bio.name },
+    { label: "Title", value: "CS Student · System Administrator" },
+    { label: "School", value: "University of Manitoba" },
+    { label: "Origin", value: "Kyiv, Ukraine" },
+    { label: "Countries Visited", value: "7" },
+  ],
+  [
+    { label: "OS", value: "Arch Linux x86_64 (btw)" },
+    { label: "CPU", value: "AMD Ryzen 5 7600X" },
+    { label: "GPU", value: "NVIDIA GeForce RTX 4070 SUPER" },
+    { label: "Memory", value: "32 GiB" },
+    { label: "Languages", value: "Java, TypeScript, Python, Bash" },
+    { label: "PC Builds", value: "3" },
+  ],
+  [
+    { label: "Favourite Game", value: "Victoria 3" },
+    { label: "Favourite Song", value: "Lil Mosey — Go Ahead" },
+    { label: "Favourite Movie", value: "Sherlock Holmes" },
+    { label: "Favourite Course", value: "Data Structures & Algorithms" },
+    { label: "Last Book Read", value: "Jules Verne — 20,000 Leagues Under the Sea" },
+  ],
+];
+
+export const paletteRow = [
+  "bg-sumi-ink-4",
+  "bg-peach-red",
+  "bg-spring-green",
+  "bg-carp-yellow",
+  "bg-crystal-blue",
+  "bg-oni-violet",
+  "bg-wave-aqua-2",
+  "bg-fuji-white",
 ];

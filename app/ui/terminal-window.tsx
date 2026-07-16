@@ -1,7 +1,7 @@
-import { site } from "../lib/site";
+import { bio } from "../lib/data";
 
 /**
- * Ghostty-style floating terminal window. Everything on the site renders
+ * Ghostty-style floating terminal window. Everything on the bio renders
  * inside this frame: titlebar on top, then whatever is passed as children
  * (nav tabs, page content, footer).
  */
@@ -16,7 +16,7 @@ export default function TerminalWindow({
         {/* Titlebar */}
         <div className="flex h-9 shrink-0 items-center justify-center border-b border-sumi-ink-4 bg-sumi-ink-0 px-4">
           <span className="text-xs text-fuji-gray">
-            {site.user}@{site.host} — ghostty
+            {bio.user}@{bio.host} — ghostty
           </span>
         </div>
         {children}

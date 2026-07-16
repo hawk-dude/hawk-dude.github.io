@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Prompt from "../ui/prompt";
-import { site } from "../lib/site";
+import { bio } from "../lib/data";
 
 export const metadata: Metadata = {
   title: "Contact — Oleksandr Yastrebov",
@@ -9,18 +9,18 @@ export const metadata: Metadata = {
 const contacts = [
   {
     label: "email",
-    value: site.email,
-    href: `mailto:${site.email}`,
+    value: bio.email,
+    href: `mailto:${bio.email}`,
   },
   {
     label: "github",
-    value: `github.com/${site.githubHandle}`,
-    href: site.github,
+    value: `github.com/${bio.githubHandle}`,
+    href: bio.github,
   },
   {
     label: "linkedin",
-    value: `linkedin.com/in/${site.linkedinHandle}`,
-    href: site.linkedin,
+    value: `linkedin.com/in/${bio.linkedinHandle}`,
+    href: bio.linkedin,
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Contact() {
         ))}
         <div className="flex flex-col sm:flex-row">
           <dt className="w-28 shrink-0 text-oni-violet">location:</dt>
-          <dd className="text-fuji-white">{site.location}</dd>
+          <dd className="text-fuji-white">{bio.location}</dd>
         </div>
       </dl>
       <p className="mt-2 text-fuji-gray">
